@@ -1,8 +1,10 @@
 import hashlib
 from termcolor import colored
 hashfile = raw_input("Enter The SHA256 Hash :")
+wordlistname = raw_input("Enter Wordlist file name:")
+
 HTBhash = hashfile.strip()
-wordlist = open("rockyou.txt","r")
+wordlist = open(wordlistname,"r")
 wordlistline = ''
 wordlistlineencode = ''
 while wordlistlineencode != HTBhash:
@@ -12,4 +14,3 @@ while wordlistlineencode != HTBhash:
 
 print colored("password is ========>",'red'),colored(wordlistline,'red')
 print colored("########################   THANK U :)    ########################",'red')
-
